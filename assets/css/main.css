@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  font-weight: 300; }
+
+body {
+  background-color: #fbfbfb; }
+
+a {
+  color: gray;
+  text-decoration: none; }
+
+.wrapper {
+  width: 960px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+/* menu bar */
+.menu-bar {
+  position: fixed;
+  right: 0;
+  height: 60px;
+  line-height: 60px;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  border-bottom: 1px solid #d6d6d6;
+  overflow: hidden;
+  z-index: 99; }
+  .menu-bar .logo {
+    position: absolute;
+    width: 20px;
+    padding-top: 20px;
+    transition: .3s ease-in-out; }
+  .menu-bar .outLogo {
+    width: 20px;
+    position: absolute;
+    opacity: 0;
+    float: left;
+    transition: .3s ease-in-out; }
+  .menu-bar .name {
+    font-size: 16px;
+    font-weight: 500;
+    float: left;
+    padding: 100px 0px;
+    transition: .3s ease-in-out; }
+  .menu-bar .outName {
+    font-size: 16px;
+    font-weight: 500;
+    float: left;
+    transition: .3s ease-in-out; }
+  .menu-bar .links {
+    float: right; }
+    .menu-bar .links a {
+      text-decoration: none;
+      margin-left: 20px; }
+      .menu-bar .links a:hover {
+        color: #4c4c4c; }
+
+/* headline */
+.headline {
+  padding-top: 125px;
+  padding-bottom: 72px;
+  width: 80%; }
+  .headline h1 {
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 48px; }
+  .headline h3 {
+    font-size: 18px;
+    font-weight: normal;
+    padding-top: 10px;
+    padding-bottom: 24px; }
+  .headline .button {
+    display: inline-block;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    border: 1px solid #dddddd;
+    color: #999999;
+    text-decoration: none;
+    padding: 11px 21px;
+    border-radius: 5px;
+    transition: .3s ease-in-out; }
+    .headline .button:hover {
+      border: 1px solid #999;
+      color: #333;
+      box-shadow: 0 1px 2px #999; }
+  .headline .img {
+    margin-top: 50px;
+    width: 125%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/assets/img/landscape-man.jpg);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.3);
+    transition: background-color 300ms ease, all 300ms ease; }
+    .headline .img:hover {
+      box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.4);
+      -webkit-transform: translate(0px, -2px);
+      -ms-transform: translate(0px, -2px);
+      transform: translate(0px, -2px); }
+
+.about {
+  background-color: black;
+  padding: 100px 0px;
+  color: white; }
+  .about h1 {
+    width: 75%;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 30px; }
+  .about p {
+    width: 75%;
+    font-size: 34px; }
+
+.what h1 {
+  padding: 100px 0px;
+  display: inline-block;
+  font-weight: 700; }
+.what a {
+  padding: 100px 0px;
+  display: inline-block;
+  float: right;
+  font-weight: 500;
+  font-size: 15px;
+  color: #999; }
+  .what a:hover {
+    color: #000; }
+
+.work .content {
+  height: 1100px; }
+  .work .content .work-example {
+    float: left;
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    background-color: black;
+    margin: 30px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.3);
+    position: relative; }
+    .work .content .work-example:hover {
+      box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.4); }
+    .work .content .work-example:hover h1 {
+      opacity: 1; }
+    .work .content .work-example h1 {
+      width: 200px;
+      position: absolute;
+      margin-left: 50px;
+      opacity: 0;
+      color: white;
+      text-align: center;
+      transition: .3s;
+      top: 65%; }
+      .work .content .work-example h1 span {
+        font-size: 75%; }
+
+.img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center; }
+
+.img:nth-child(1) {
+  background-image: url(/assets/img/landscape-man.jpg); }
+
+.img:nth-child(2) {
+  background-image: url(/assets/img/landscape-man.jpg); }
+
+.img:nth-child(3) {
+  background-image: url(/assets/img/landscape-man.jpg); }
+
+.img:nth-child(4) {
+  background-image: url(/assets/img/landscape-man.jpg); }
+
+.img:nth-child(5) {
+  background-image: url(/assets/img/landscape-man.jpg); }
+
+.img:nth-child(6) {
+  background-image: url(/assets/img/landscape-man.jpg); }
+
+@media only screen and (max-width: 800px) {
+  .links {
+    display: none; } }
+@media only screen and (min-width: 800px) {
+  .hamburger {
+    display: none; } }
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  transform: scale(0.75);
+  float: right;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  background-color: transparent;
+  border: none;
+  outline: none; }
+
+.hamburger-box {
+  margin-top: 18px;
+  width: 40px;
+  height: 25px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 2px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease; }
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block; }
+
+.hamburger-inner::before {
+  top: -10px; }
+
+.hamburger-inner::after {
+  bottom: -10px; }
+
+/*
+   * Collapse
+   */
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
+
+.hamburger--collapse .hamburger-inner::before {
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
+
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
   font-weight: 300; }
 
@@ -36,23 +37,27 @@ a {
     position: absolute;
     width: 20px;
     padding-top: 20px;
+    -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out; }
   .menu-bar .outLogo {
     width: 20px;
     position: absolute;
     opacity: 0;
     float: left;
+    -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out; }
   .menu-bar .name {
     font-size: 16px;
     font-weight: 500;
     float: left;
     padding: 100px 0px;
+    -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out; }
   .menu-bar .outName {
     font-size: 16px;
     font-weight: 500;
     float: left;
+    -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out; }
   .menu-bar .links {
     float: right; }
@@ -79,31 +84,35 @@ a {
   .headline .button {
     display: inline-block;
     background-color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
     border: 1px solid #dddddd;
     color: #999999;
     text-decoration: none;
     padding: 11px 21px;
     border-radius: 5px;
+    -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out; }
     .headline .button:hover {
       border: 1px solid #999;
       color: #333;
-      box-shadow: 0 1px 2px #999; }
+      -webkit-box-shadow: 0 1px 2px #999;
+              box-shadow: 0 1px 2px #999; }
   .headline .img {
     margin-top: 50px;
     width: 125%;
     height: 400px;
     background-position: center;
     background-size: cover;
-    background-image: url(/assets/img/landscape-man.jpg);
     border-radius: 10px;
-    box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.3);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.3);
+            box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.3);
+    -webkit-transition: background-color 300ms ease, all 300ms ease;
     transition: background-color 300ms ease, all 300ms ease; }
     .headline .img:hover {
-      box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.4);
+      -webkit-box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.4);
+              box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.4);
       -webkit-transform: translate(0px, -2px);
-      -ms-transform: translate(0px, -2px);
       transform: translate(0px, -2px); }
 
 .about {
@@ -144,10 +153,12 @@ a {
     margin: 30px 10px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.3);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.3);
+            box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.3);
     position: relative; }
     .work .content .work-example:hover {
-      box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.4); }
+      -webkit-box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.4);
+              box-shadow: 0 15px 45px -10px rgba(10, 16, 34, 0.4); }
     .work .content .work-example:hover h1 {
       opacity: 1; }
     .work .content .work-example h1 {
@@ -157,6 +168,7 @@ a {
       opacity: 0;
       color: white;
       text-align: center;
+      -webkit-transition: .3s;
       transition: .3s;
       top: 65%; }
       .work .content .work-example h1 span {
@@ -200,12 +212,18 @@ a {
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  transform: scale(0.75);
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
   float: right;
   cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
   background-color: transparent;
   border: none;
   outline: none; }
@@ -228,9 +246,14 @@ a {
   background-color: #000;
   border-radius: 2px;
   position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease; }
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease; }
 
 .hamburger-inner::before, .hamburger-inner::after {
   content: "";
@@ -248,30 +271,45 @@ a {
 .hamburger--collapse .hamburger-inner {
   top: auto;
   bottom: 0;
-  transition-duration: 0.13s;
-  transition-delay: 0.13s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  -webkit-transition-duration: 0.13s;
+          transition-duration: 0.13s;
+  -webkit-transition-delay: 0.13s;
+          transition-delay: 0.13s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
 .hamburger--collapse .hamburger-inner::after {
   top: -20px;
+  -webkit-transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
   transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
 
 .hamburger--collapse .hamburger-inner::before {
-  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  -webkit-transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
 .hamburger--collapse.is-active .hamburger-inner {
-  transform: translate3d(0, -10px, 0) rotate(-45deg);
-  transition-delay: 0.22s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -webkit-transition-delay: 0.22s;
+          transition-delay: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 .hamburger--collapse.is-active .hamburger-inner::after {
   top: 0;
   opacity: 0;
+  -webkit-transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
   transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
 
 .hamburger--collapse.is-active .hamburger-inner::before {
   top: 0;
-  transform: rotate(-90deg);
-  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 /*# sourceMappingURL=main.css.map */

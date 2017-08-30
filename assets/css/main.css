@@ -3,11 +3,12 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
   font-weight: 300; }
 
 body {
-  background-color: #fbfbfb; }
+  background-color: #fbfbfb;
+  overflow: hidden; }
 
 a {
   color: gray;
